@@ -6,6 +6,29 @@ import Create from "./component/Create";
 import {Route, Routes} from 'react-router-dom';
 import Navbar from './component/Navbar'
 
-= "inheret"
+function App() {
+    const myWidth = 220
+    return (
+        <div className="App">
+            <Navbar
+                drawerWidth={myWidth}
+                content = {
+                    <Routes>
+                        <Route path="" element={<Home/>}/>
+                        <Route path="/about" element={<About/>}/>
+                        <Route path="/create" element={<Create/>}/>
+
+                    </Routes>
+                }
+
+            />
+
+
+
+
+        </div>
+    );
+}
+
 
 export default App;
